@@ -1,0 +1,15 @@
+#collections article .collection-img:hover img {
+  transform: scale(1.2);
+}
+#collections article .collection-img img {
+  transition: 0.2s;
+}
+#collections article .collection-img {
+  overflow: hidden;
+}
+.collection-img img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px; 
+}
