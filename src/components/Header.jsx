@@ -15,9 +15,9 @@ function Header() {
   };
 
   return (
-    <header className="bg-gray-800 text-white">
+    <header className="bg-white text-black fixed left-0 right-0 top-0 z-10">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <Link to="/" className="hover:text-gray-300">
+        <Link to="/">
           <h1 className="text-2xl font-bold uppercase">Gehlot furniture</h1>
         </Link>
         {/* Desktop Navigation */}
@@ -38,18 +38,16 @@ function Header() {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <span className="cursor-pointer hover:text-gray-300 select-none">
-                Collections ▼
-              </span>
+              <span className="cursor-pointer  select-none">Collections ▼</span>
               <ul
-                className={`absolute left-0 top-10 w-48 bg-gray-900 shadow-lg rounded ${
+                className={`absolute left-0 top-10 w-48 bg-white shadow-lg rounded ${
                   dropdownOpen ? "block" : "hidden"
                 }`}
               >
                 <li>
                   <Link
                     to="/living-bedroom"
-                    className="block px-4 py-2 hover:bg-gray-700"
+                    className="block px-4 py-2 hover:bg-gray-700 hover:text-white"
                   >
                     Living Bedroom
                   </Link>
@@ -57,15 +55,15 @@ function Header() {
                 <li>
                   <Link
                     to="/master-bedroom"
-                    className="block px-4 py-2 hover:bg-gray-700"
+                    className="block px-4 py-2 hover:bg-gray-700 hover:text-white"
                   >
                     Master Bedroom
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/dining-set-kitchen"
-                    className="block px-4 py-2 hover:bg-gray-700"
+                    to="/dining-kitchen"
+                    className="block px-4 py-2 hover:bg-gray-700 hover:text-white"
                   >
                     Dining Set & Kitchen
                   </Link>
@@ -73,7 +71,7 @@ function Header() {
                 <li>
                   <Link
                     to="/commercial-furniture"
-                    className="block px-4 py-2 hover:bg-gray-700"
+                    className="block px-4 py-2 hover:bg-gray-700 hover:text-white"
                   >
                     Commercial Furniture
                   </Link>
@@ -81,7 +79,7 @@ function Header() {
                 <li>
                   <Link
                     to="/outdoor"
-                    className="block px-4 py-2 hover:bg-gray-700"
+                    className="block px-4 py-2 hover:bg-gray-700 hover:text-white"
                   >
                     Outdoor
                   </Link>
@@ -89,7 +87,7 @@ function Header() {
                 <li>
                   <Link
                     to="/sofas"
-                    className="block px-4 py-2 hover:bg-gray-700"
+                    className="block px-4 py-2 hover:bg-gray-700 hover:text-white"
                   >
                     Sofas
                   </Link>
@@ -97,7 +95,7 @@ function Header() {
                 <li>
                   <Link
                     to="/storage"
-                    className="block px-4 py-2 hover:bg-gray-700"
+                    className="hover:text-white block px-4 py-2 hover:bg-gray-700"
                   >
                     Storage
                   </Link>
@@ -135,31 +133,31 @@ function Header() {
       </div>
 
       {/* Mobile Navigation */}
-      <div className={`${isOpen ? "block" : "hidden"} md:hidden bg-gray-900`}>
+      <div className={`${isOpen ? "block" : "hidden"} md:hidden bg-white text-black`}>
         <ul>
           <li>
-            <Link to="/" className="block py-2 px-4 hover:bg-gray-700">
+            <Link to="/" className="block py-2 px-4 hover:bg-gray-700 hover:text-white">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/shop" className="block py-2 px-4 hover:bg-gray-700">
+            <Link to="/shop" className="block py-2 px-4 hover:bg-gray-700 hover:text-white hover:text-white">
               Shop
             </Link>
           </li>
           <li>
             <button
-              className="w-full text-left block py-2 px-4 hover:bg-gray-700 focus:outline-none"
+              className="w-full text-left block py-2 px-4 hover:bg-gray-700 focus:outline-none hover:text-white"
               onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
             >
               Collections {mobileDropdownOpen ? "▲" : "▼"}
             </button>
             {mobileDropdownOpen && (
-              <ul className="pl-4 bg-gray-800">
+              <ul className="pl-4 bg-white">
                 <li>
                   <Link
                     to="/living-bedroom"
-                    className="block px-4 py-2 hover:bg-gray-700"
+                    className="block px-4 py-2 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsOpen(false)} // close menu on click
                   >
                     Living Bedroom
@@ -168,7 +166,7 @@ function Header() {
                 <li>
                   <Link
                     to="/master-bedroom"
-                    className="block px-4 py-2 hover:bg-gray-700"
+                    className="block px-4 py-2 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsOpen(false)}
                   >
                     Master Bedroom
@@ -176,8 +174,8 @@ function Header() {
                 </li>
                 <li>
                   <Link
-                    to="/dining-set-kitchen"
-                    className="block px-4 py-2 hover:bg-gray-700"
+                    to="/dining-kitchen"
+                    className="block px-4 py-2 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsOpen(false)}
                   >
                     Dining Set & Kitchen
@@ -186,7 +184,7 @@ function Header() {
                 <li>
                   <Link
                     to="/commercial-furniture"
-                    className="block px-4 py-2 hover:bg-gray-700"
+                    className="block px-4 py-2 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsOpen(false)}
                   >
                     Commercial Furniture
@@ -195,7 +193,7 @@ function Header() {
                 <li>
                   <Link
                     to="/outdoor"
-                    className="block px-4 py-2 hover:bg-gray-700"
+                    className="block px-4 py-2 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsOpen(false)}
                   >
                     Outdoor
@@ -204,7 +202,7 @@ function Header() {
                 <li>
                   <Link
                     to="/sofas"
-                    className="block px-4 py-2 hover:bg-gray-700"
+                    className="block px-4 py-2 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsOpen(false)}
                   >
                     Sofas
@@ -213,7 +211,7 @@ function Header() {
                 <li>
                   <Link
                     to="/storage"
-                    className="block px-4 py-2 hover:bg-gray-700"
+                    className="block px-4 py-2 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsOpen(false)}
                   >
                     Storage
@@ -223,7 +221,7 @@ function Header() {
             )}
           </li>
           <li>
-            <Link to="/contact" className="block py-2 px-4 hover:bg-gray-700">
+            <Link to="/contact" className="block py-2 px-4 hover:bg-gray-700 hover:text-white">
               Contact
             </Link>
           </li>

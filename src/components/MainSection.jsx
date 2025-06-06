@@ -1,6 +1,6 @@
 function MainSection() {
-  return (
-    <main className=" py-1 px-4 sm:px-6 lg:px-8 ">
+  return (<>
+    <main className=" py-1 px-4 sm:px-6 lg:px-8 mt-24">
       <div className="container max-w-7xl mx-auto">
         <div className="  flex flex-col-reverse md:flex-row items-center gap-10">
           {/* Text Section */}
@@ -32,6 +32,7 @@ function MainSection() {
         </div>
       </div>
     </main>
+    </>
   );
 }
 

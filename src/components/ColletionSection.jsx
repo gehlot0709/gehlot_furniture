@@ -11,14 +11,17 @@ function CollectionsSection() {
     {
       title: "Master Bedroom",
       img: "./src/assets/masterbedroom.jpg",
+      link: "/master-bedroom",
     },
     {
       title: "Dining & Kitchen",
       img: "src/assets/kitchen.jpg",
+      link : "dining-kitchen"
     },
     {
       title: "Commercial Furniture",
       img: "src/assets/commercial.jpg",
+      link : "commercial-furniture"
     },
     {
       title: "Outdoor",
@@ -31,6 +34,7 @@ function CollectionsSection() {
   ];
 
   return (
+    <>
     <section id="collections" className="py-16">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">
@@ -66,6 +70,12 @@ function CollectionsSection() {
         </div>
       </div>
     </section>
+     <section className="service mt-24 mb-24" >
+      <div>
+        <img src="./src/assets/service.png" alt="" />
+      </div>
+    </section>
+    </>
   );
 }
 
